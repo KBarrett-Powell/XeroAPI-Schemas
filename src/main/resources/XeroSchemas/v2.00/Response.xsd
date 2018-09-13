@@ -40,6 +40,7 @@
   <xs:include schemaLocation="PurchaseOrder.xsd" />
   <xs:include schemaLocation="Allocation.xsd" />
   <xs:include schemaLocation="ApiException.xsd" />
+  <xs:include schemaLocation="PayRun.xsd" />
 
   <xs:element name="Response" type="Response" />
   
@@ -85,6 +86,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Allocations" type="ArrayOfAllocation" />
       <xs:element minOccurs="0" maxOccurs="1" name="ApiException" type="Elements" />
       <xs:element minOccurs="0" maxOccurs="1" name="Options" type="ArrayOfTrackingCategoryOption" />
+      <xs:element minOccurs="0" maxOccurs="1" name="payRunsInfo" type="PayRunsInfo" />
     </xs:sequence>
   </xs:complexType>
   

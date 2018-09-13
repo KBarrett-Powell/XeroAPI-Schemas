@@ -858,5 +858,61 @@
       <xs:enumeration value="USONRAMP"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <!-- calendarType -->
+  <xs:simpleType name="calendartype">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="WEEKLY"/>
+      <xs:enumeration value="FORTNIGHTLY"/>
+      <xs:enumeration value="FOURWEEKLY"/>
+      <xs:enumeration value="MONTHLY"/>
+      <xs:enumeration value="ANNUAL"/>
+      <xs:enumeration value="QUARTERLY"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- deductionCategory -->
+  <xs:simpleType name="deductionCategory">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="STAKEHOLDERPENSION"/>
+      <xs:enumeration value="STAKEHOLDERPENSIONPOSTTAX"/>
+      <xs:enumeration value="CHILDCAREVOUCHER"/>
+      <xs:enumeration value="SALARYSACRIFICE"/>
+      <xs:enumeration value="UKOTHER"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- httpStatusCode -->
+  <xs:simpleType name="httpstatusCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="BADREQUEST"/>
+      <xs:enumeration value="NOTFOUND"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- payrollProblem -->
+  <xs:simpleType name="payrollProblem">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="NULL"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- payrunStatus -->
+  <xs:simpleType name="payrunStatus">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="DRAFT"/>
+      <xs:enumeration value="POSTED"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- payrunType -->
+  <xs:simpleType name="payrunType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="SCHEDULED"/>
+      <xs:enumeration value="UNSCHEDULED"/>
+      <xs:enumeration value="EARLIERYEARUPDATE"/>
+    </xs:restriction>
+  </xs:simpleType>
   
 </xs:schema>
