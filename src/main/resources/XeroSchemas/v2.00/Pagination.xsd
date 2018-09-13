@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Pagination"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <!-- Pagination -->
+  <xs:element name="Pagination">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="page" type="xs:integer" minOccurs="0" maxOccurs="1" />
+        <xs:element name="pageSize" type="xs:integer" minOccurs="0" maxOccurs="1" />
+        <xs:element name="pageCount" type="xs:integer" minOccurs="0" maxOccurs="1" />
+        <xs:element name="itemCount" type="xs:integer" minOccurs="0" maxOccurs="1" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="Invoice"
+<xs:schema id="PayRun"
     elementFormDefault="qualified"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:include schemaLocation="BaseTypes.xsd" />
   <xs:include schemaLocation="Account.xsd" />
-  <xs:include schemaLocation="Attachment.xsd" />
   <xs:include schemaLocation="Contact.xsd" />
-  <xs:include schemaLocation="CurrencyCode.xsd" />
   <xs:include schemaLocation="LineItem.xsd" />
   <xs:include schemaLocation="Payment.xsd" />
+  <xs:include schemaLocation="Pagination.xsd" />
 
   <xs:element name="PayRuns" nillable="true" type="ArrayOfPayRun" />
 
