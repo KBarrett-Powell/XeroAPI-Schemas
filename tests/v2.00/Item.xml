@@ -37,7 +37,7 @@
       <SalesDetails>
         <UnitPrice>19.9500</UnitPrice>
         <AccountCode>400</AccountCode>
-        <TaxTypssssse>OUTPUT</TaxType>
+        <TaxType>OUTPUT</TaxType>
       </SalesDetails>
       <Name>Fish out of Water: Finding Your Brand</Name>
       <IsTrackedAsInventory>false</IsTrackedAsInventory>
