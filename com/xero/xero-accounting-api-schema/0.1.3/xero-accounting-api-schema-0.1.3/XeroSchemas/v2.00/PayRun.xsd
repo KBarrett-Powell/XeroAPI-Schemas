@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PayRun"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  <xs:include schemaLocation="Account.xsd" />
+  <xs:include schemaLocation="Contact.xsd" />
+  <xs:include schemaLocation="LineItem.xsd" />
+  <xs:include schemaLocation="Payment.xsd" />
+  <xs:include schemaLocation="Pagination.xsd" />
+
+  <xs:element name="PayRuns" nillable="true" type="ArrayOfPayRun" />
+
+  <xs:complexType name="ArrayOfPayRun">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PayRun" nillable="true" type="PayRun" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="PayRun" type="PayRun" />
+
+  <xs:complexType name="PayRun">
+    <xs:all>
+      <xs:element minOccurs="1" maxOccurs="1" name="payRunID" type="uniqueIdentifier" />
+      <xs:element minOccurs="0" maxOccurs="1" name="payrollCalendarID" type="uniqueIdentifier" />
+      <xs:element minOccurs="0" maxOccurs="1" name="periodStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="periodEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="paymentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="totalCost" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="totalPay" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="payRunStatus" type="payrunStatus" />
+      <xs:element minOccurs="0" maxOccurs="1" name="payRunType" type="payrunType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="calendarType" type="calendartype" />
+      <xs:element minOccurs="0" maxOccurs="1" name="postedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="payslipMessage" type="xs:string" />
+    </xs:all>
+    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
+  </xs:complexType>
+  
+  <xs:element name="payRunsInfo" type="PayRunsInfo" />
+
+  <xs:complexType name="PayRunsInfo">
+    <xs:all>
+      <xs:element minOccurs="1" maxOccurs="1" name="id" type="uniqueIdentifier" />
+      <xs:element minOccurs="0" maxOccurs="1" name="providerName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dateTimeUTC" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="httpStatusCode" type="httpstatusCode" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="pagination" type="Pagination" />
+      <xs:element minOccurs="0" maxOccurs="1" name="problem" type="payrollProblem" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PayRuns" type="ArrayOfPayRun" />
+    </xs:all>
+    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
+  </xs:complexType>
+
+</xs:schema>

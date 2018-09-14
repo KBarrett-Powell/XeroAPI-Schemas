@@ -38,10 +38,10 @@
 	                      <forceRegenerate>false</forceRegenerate>
 	                      <generatePackage>com.xero.model</generatePackage>
 	                      <schemaIncludes>
-	                          <include>com/xero/model/*.xsd</include>
+	                          <include>XeroSchemas/v2.00/*.xsd</include>
 	                      </schemaIncludes>
 	                      <bindingIncludes>
-	                          <include>com/xero/model/*.xjb</include>
+	                          <include>XeroSchemas/v2.00/*.xjb</include>
 	                      </bindingIncludes>
 	                      <extension>true</extension>
 	                      <args>
